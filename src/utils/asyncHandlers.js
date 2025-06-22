@@ -1,12 +1,14 @@
 //we are using promises
 
 const asyncHandler = (requestHandler) => {
-    (req, res, next) => {
+    return (req, res, next) => {
         Promise.resolve(requestHandler(req, res, next)).    //here if the promise is resolved then what happes is written and also handlesd the error
         catch((error) =>next(error));      
         }
+
     }
 
+    export default asyncHandler;
 
 
 
