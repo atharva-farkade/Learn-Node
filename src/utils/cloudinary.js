@@ -1,3 +1,4 @@
+
 import {v2 as cloudinary} from 'cloudinary';
 import fs from 'fs';
 
@@ -15,7 +16,7 @@ import fs from 'fs';
                 throw new Error('No file path provided');
             }
             //uploading a file on cloudinary 
-            const response =  await cloudinary.uploader.upload(localfilePath,{})//we get one option resourse type and take it as raw (any type ) instead of specifying 
+            const response =  await cloudinary.uploader.upload(localFilePath,{})//we get one option resourse type and take it as raw (any type ) instead of specifying 
             console.log('File uploaded successfully on cloudinary', response.url);
             return response;
         } catch (error) {
