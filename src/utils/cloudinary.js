@@ -18,6 +18,7 @@ import fs from 'fs';
             //uploading a file on cloudinary 
             const response =  await cloudinary.uploader.upload(localFilePath,{})//we get one option resourse type and take it as raw (any type ) instead of specifying 
             console.log('File uploaded successfully on cloudinary', response.url);
+            fs.unlinkSync(localFilePath) // after successful upload, delete the local file
             return response;
         } catch (error) {
             
