@@ -41,7 +41,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: [true,"Password is required"],
-        select: false // Do not return password by default
+        // select: false // Do not return password by default
     },
     refreshToken:{
         type: String,
